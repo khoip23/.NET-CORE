@@ -2,6 +2,8 @@
 {get;} : chỉ cho người dùng xem chứ không đợc gán giá trị cho biến
 {private get; set;}: chỉ cho người dùng gán chứ không cho xem kkk
 
+teskksjfojsdfds
+
 get: cho phép truy xuất thuộc tính đó bên phía đối tượng
 set: cho phép gán giá trị cho thuộc tính bên phía đối tượng
 

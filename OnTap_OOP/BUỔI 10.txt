@@ -13,3 +13,5 @@ var : var là từ khóa không phải kdl, giúp khai báo 1 biến không cầ
 +protected: cho phép truy cập từ trong lớp và các lớp kế thừa
 
 +1 lớp đối tượng có thể tạo ra nhiều đối tượng.
+
+aaa

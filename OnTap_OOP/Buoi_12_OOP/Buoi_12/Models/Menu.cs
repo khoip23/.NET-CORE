@@ -19,10 +19,14 @@ public class Menu
         ");
     }
 
-    public int ChonChucNang()
+    public void ChonChucNang()
     {
         System.Console.Write("Nhập vào lựa chọn của bạn: ");
         Chon = Convert.ToInt32(Console.ReadLine());
-        return Chon;
+    }
+
+    public void Thoat()
+    {
+        Chon = 4;
     }
 }

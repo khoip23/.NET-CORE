@@ -2,7 +2,7 @@ public class monAn
 {
     public static int CreatIDMonAn =1;
     public int maMonAn { get; set; }
-    public string? tenMonAn { get; set; }
+    public string tenMonAn { get; set; }
 
     public double price { get; set; }
 

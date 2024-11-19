@@ -24,4 +24,4 @@ while (menu.ChonChucNang != 6)
     }
     menu.HienThiChucNang();
     menu.ChonChucNang();
-}
+}34

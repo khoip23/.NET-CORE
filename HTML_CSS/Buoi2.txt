@@ -1,0 +1,31 @@
+-Các thẻ input sẽ được chứa trong thẻ format    
+    +thẻ form: thẻ block
+        - dùng để lấy thông tin người dùng gửi về sever xử lý
+        - action là nơi tiếp nhận thông tin các thẻ input
+        - method : giao thức gửi nhận dữ liệu từ form (get: gửi qua url, post: coi ngầm)
+        - thẻ label (span): (inline) tương tự thẻ nhưng không chứa link
+2. thẻ input: 
+    - type:
+        +text: Nội dung nhập vào là text (văn bản)'
+        +password: không coppy được nội dung và dược che bằng kí tự ******
+        +radio: là thể dùng để chọn 1 trên nhiều option
+        lưu ý: name:dùng để xác định 1 gruop radio
+                id:kết hợp với label để tăng phạm vi click
+                value:giá trị người dùng chọn
+        +checkbox: tương tự radio tuy nhiên đợc chọn nhiều kết quả
+        +select: (option)
+            +thường: thay thế cho radio hiển thị nội dung chọn ngắn gọn hơn
+            +multiple: thay cho checkbox chọn đợc nhiều kết quả bằng cách đè shift
+        +textarea: tương tự text nhưng nội dung sẽ được hiển thị rộng hơn bởi 2 thuộc tính rows và cols
+        +color: để chọn màu
+        +range: chọn giá trị min max
+        +number: tương tự range nhưng hiển thị dạng số
+        +file: upload file có thể giới hạn định dạng bằng thuộc tính accept
+        +date: chọn ngày tháng
+        
+    -placeholder: nhãn hiển thị mờ trên thẻ input
+3. thẻ ngữ nghĩa (HTML5) - sẽ giống hệt thẻ div (block)
+    3.1: <section>:
+    3.2: <header>:
+    3.3: <article>:
+    3.4: <footer>:

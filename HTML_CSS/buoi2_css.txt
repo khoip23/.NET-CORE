@@ -1,0 +1,4 @@
+CSS-Internal
+Độ ưu tiên: 
+Internal style: độ ưu tiên cao nhất
+Còn lại css nào load sau sẽ đè css trước

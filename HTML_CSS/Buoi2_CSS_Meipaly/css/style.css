@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'owsald';
+    src: url(/Buoi2_CSS_Meipaly/fonts/oswald.ttf);
+}
+
+:root {
+    --text-light: #fff;
+    --text-danger: #ff0000;
+    --text-dark: #000000;
+    --bg-light: #fff;
+    --bg-danger: #ff0000;
+    --bg-dark: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: oswald;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.active {
+    color: var(--text-danger) !important;
+}
+
+.header {
+    background-color: black;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+
+}
+
+.header .logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: lowercase;
+}
+
+.header nav {
+    margin: 20px;
+}
+
+.header .menu {
+    margin: 20px;
+}
+
+.header .menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .menu ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.header .menu a {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-light);
+    transition: color 1s;
+}
+
+.header .menu a:hover {
+    color: var(--text-danger);
+    transition: color 0.5s;
+
+}
+
+.carousel {
+    background-color: var(--bg-dark);
+    border: solid 1px;
+    height: 800px;
+}
+
+.carousel .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .container p {
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--text-light);
+}
+
+.carousel .container h1 {
+    font-size: 78px;
+    font-weight: 200;
+    color: var(--text-light);
+}
+
+.carousel .container h2 {
+    font-size: 78px;
+    font-weight: 200;
+    color: var(--text-light);
+}
+
+.carousel .container button {
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--text-light);
+    background: var(--bg-danger);
+    padding: 10px;
+    border: 1px solid rgb(88, 3, 3);
+    text-transform: uppercase;
+    transition: all 1s;
+    width: 150px;
+    cursor: pointer;
+}
+
+.carousel .container button:hover {
+    background-color: #4d0808;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.carousel .container i {
+    font-size: 30px;
+    color: var(--text-light);
+    animation: fadeDown 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}

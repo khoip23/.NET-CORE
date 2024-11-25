@@ -1,4 +1,13 @@
 CSS-Internal
-Độ ưu tiên: 
-Internal style: độ ưu tiên cao nhất
-Còn lại css nào load sau sẽ đè css trước
+-Độ ưu tiên: 
+    +Internal style: độ ưu tiên cao nhất
+    +Còn lại css nào load sau sẽ đè css trước
+selector:
+    +#id: 100 điểm (ít sử dụng)
+    +.classname: 10 điểm (sử dụng nhiều nhất)
+    +tagname : 1 điểm
+    +[attribute] 10 điểm
+    =>cùng điểm ưu tiên thì css dưới cùng sẽ được ưu tiên
+    nestong css: (css lồng nhau)
+    + #id selector
+    + .class .class selector

@@ -50,8 +50,9 @@ cursor: đổi con trỏ chuột thành cái khác ví dụ pointer là đổi t
 @keyframes: hiệu ứng
 + opacity: mờ đến rõ
 
+line-height: khoảng cách giữa các dòng văn bản
 
-
+flex-wrap: wrap: khi flex item đủ 100% độ rộng thì tự động xuống dòng
 
 
 

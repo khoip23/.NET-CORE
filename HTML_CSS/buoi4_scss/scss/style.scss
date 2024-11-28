@@ -1,0 +1,44 @@
+@import "/scss/variable";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;     
+}
+
+
+.header{
+    .container{
+
+        .logo{
+            font-size: $fs-xl;
+            font-weight: 300;
+            color: #2a73dd;
+        }
+        .menu{
+            ul {
+                li {
+                    a{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

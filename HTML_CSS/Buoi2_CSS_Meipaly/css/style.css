@@ -1,0 +1,412 @@
+@font-face {
+    font-family: 'owsald';
+    src: url(/Buoi2_CSS_Meipaly/fonts/oswald.ttf);
+}
+
+:root {
+    --text-gray: gray;
+    --text-light: #fff;
+    --text-danger: #ff0000;
+    --text-dark: #000000;
+    --bg-light: #fff;
+    --bg-danger: #ff0000;
+    --bg-dark: #000000;
+    --bg-gray: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: oswald;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.active {
+    color: var(--text-danger) !important;
+}
+
+.header {
+    background-color: transparent;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+
+}
+
+.header .logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: lowercase;
+}
+
+.header nav {
+    margin: 20px;
+}
+
+.header .menu {
+    margin: 20px;
+}
+
+.header .menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .menu ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.header .menu a {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-light);
+    transition: color 1s;
+}
+
+.header .menu a:hover {
+    color: var(--text-danger);
+    transition: color 0.5s;
+
+}
+
+.carousel {
+    background: url(/Buoi2_CSS_Meipaly/img/home_slider.jpg);
+    border: solid 1px;
+    height: 800px;
+    background-position: center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* hiệu ứng lướt bg */
+}
+
+.carousel .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .container p {
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--text-light);
+}
+
+.carousel .container h1 {
+    font-size: 78px;
+    font-weight: 200;
+    color: var(--text-light);
+}
+
+.carousel .container h2 {
+    font-size: 78px;
+    font-weight: 200;
+    color: var(--text-light);
+}
+
+.carousel .container button {
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--text-light);
+    background: var(--bg-danger);
+    padding: 10px;
+    border: 1px solid rgb(88, 3, 3);
+    text-transform: uppercase;
+    transition: all 1s;
+    width: 150px;
+    cursor: pointer;
+}
+
+.carousel .container button:hover {
+    background-color: #4d0808;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.carousel .container i {
+    font-size: 30px;
+    color: var(--text-light);
+    animation: fadeDown 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.service {
+    font-size: 30px;
+    background-color: var(--bg-dark);
+    height: 600px;
+    color: var(--text-light);
+}
+
+.service .container h1 {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-danger);
+    text-align: center;
+    padding-top: 30px;
+}
+
+.service .container h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.service .container p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: gray;
+    text-transform: initial;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.service .flex-container {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; khi flex item đủ 100% độ rộng thì tự xuống dòng */
+    width: 75%;
+}
+
+.service .flex-container .f-item {
+    background-color: var(--bg-light);
+    margin: 10px;
+    color: var(--text-gray);
+    padding: 20px;
+    width: calc(100%/6);
+    position: relative;
+}
+
+.service .flex-container .f-item::after {
+    content: "";
+    width: 3px;
+    height: 0%;
+    position: absolute;
+    background-color: var(--bg-danger);
+    right: 0;
+    top: 0;
+    transition: height 0.5s;
+}
+
+.service .f-item i,
+.service .f-item h3 {
+    display: block;
+    text-align: center;
+}
+
+.service .f-item i {
+    font-size: 50px;
+}
+
+.service .f-item h3 {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.service .flex-container .f-item:hover::after {
+    height: 100%;
+    transition: height 0.5s;
+}
+
+.portfolio {
+    background-color: var(--bg-light);
+}
+
+.portfolio .title {
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--text-gray);
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.portfolio h2 {
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.portfolio p {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-gray);
+    text-align: center;
+    padding-top: 20px;
+    text-transform: initial;
+    padding-bottom: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.portfolio .lst-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.portfolio .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(10%) contrast(50%);
+}
+
+.item-1 {
+    /* chỉnh độ rộng của grid-item
+    grid-column: n / span margin: 
+    n: vị trí của phần tử n
+    m: số cột mà phần tử chiếm */
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.item-10 {
+    /* chỉnh độ rộng của grid-item
+    grid-column: n / span margin: 
+    n: vị trí của phần tử n
+    m: số cột mà phần tử chiếm */
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+
+    /* tính vị trí sẽ dựa trên kết quả layout */
+}
+
+.portfolio .item {
+    position: relative;
+}
+
+.portfolio .overplay {
+    background-color: rgba(248, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.portfolio .item i {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    /* width: 50px;
+    height: 50px; */
+    padding: 10px;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.5s;
+    /* border-radius: 50%; chỉnh thành hình tròn  */
+}
+
+.portfolio .item i:hover {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    transition: all 0.5s;
+}
+
+.portfolio .item .logo-title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: var(--text-gray);
+}
+
+.portfolio .item .logo-desc {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: var(--text-light);
+    font-weight: 800;
+}
+
+.portfolio .item {
+    overflow: hidden;
+    /* setup khi nội dung phần tử con tràn viền */
+}
+
+.portfolio .item .overplay {
+    opacity: 0;
+    /* transform: translateY(200px); */
+}
+
+.portfolio .item:hover .overplay {
+    animation-fill-mode: both;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.portfolio .item i,
+.portfolio .item .logo-title,
+.portfolio .item .logo-desc {
+    transform: translateY(200px);
+}
+
+.portfolio .item:hover i,
+.portfolio .item:hover .logo-title,
+.portfolio .item:hover .logo-desc {
+    animation: moveUp 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+@media only screen and (max-width: 992px) {
+    
+}
+
+@media only screen and (max-width: 1200px) {
+    
+}
+
+@media only screen and (max-width: 1400px) {
+    
+}

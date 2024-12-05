@@ -1,0 +1,23 @@
+{get; set;} : cho người dùng xuất và gán giá trị cho biến
+{get;} : chỉ cho người dùng xem chứ không đợc gán giá trị cho biến
+{private get; set;}: chỉ cho người dùng gán chứ không cho xem kkk
+
+teskksjfojsdfds
+
+get: cho phép truy xuất thuộc tính đó bên phía đối tượng
+set: cho phép gán giá trị cho thuộc tính bên phía đối tượng
+
+Hàm khởi tạo: 
+được tạo trùng tên với lơp đối tượng và hàm được gọi new ra ở program (NhanVien nv = new NhanVien);
+- khi gọi hàm mặc định chương trình sẽ chạy hàm khởi tạo trước
+- ví dụ gọi hàm nhập xuất vào trong hàm khởi tạo luôn thì không cần gọi lại ở program chỉ cần tạo new (NhanVien nv = new NhanVien); thì chương trình tự động chạy hàm khởi tạo trước
+
+overloading function: Hàm chồng
+- là những phương thức trùng tên với nhau trong class, tuy nhiên sẽ có khác biết input
+1. khác nhau về số lượng tham số
+2. khác nhau về kdl của tham số 
+
+static: tĩnh (thuộc tính, phương thức)
+- không thuộc về đối tượng, thuộc về class(lớp đối tượng)
+
+static constructor sẽ thực thi khi tạo 1 object từ class hoặc gọi 1 static medthod từ class  

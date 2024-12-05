@@ -1,0 +1,63 @@
+CSS-Internal
+-Độ ưu tiên: 
+    +Internal style: độ ưu tiên cao nhất
+    +Còn lại css nào load sau sẽ đè css trước
+selector:
+    +#id: 100 điểm (ít sử dụng)
+    +.classname: 10 điểm (sử dụng nhiều nhất)
+    +tagname : 1 điểm
+    +[attribute] 10 điểm
+    =>cùng điểm ưu tiên thì css dưới cùng sẽ được ưu tiên
+    nestong css: (css lồng nhau)
+    + #id selector
+    + .class .class selector
+
+    - padding: khoảng cách từ viền thẻ đến nội dung 
+        + : padding-top là trên, còn có left right bottom 
+    - margin: khoảng cách giữa 2 thẻ
+        + : margin-top là trên, còn có left right bottom
+    - * : là tất cả thẻ sẽ reset margin and padding
+
+font chữ:
+font ký tự:
+
+font-weight: độ đậm nhạt
+
+đối với văn bản chỉnh theo thứ tự: font-size, font-weight, color
+
+text-decoration: kiểu đường kẻ của link
+
+text-transform: chỉnh từ hoa sang thường hoặc ngược lại và nhiều kiểu khác nữa
+
+Hiệu ứng: hover là rê chuột vào (ví dụ là đổi màu khi rê chuột vào...) thường đi kèm với transitione
+
+!important độ ưu tiên cao nhất
+
+bordor: chỉnh viền
+    + kiểu viền: border-style
+    + kích thước: border-width
+    +màu sắc: border-color
+
+height: setup chiều cao cố định
+
+    +min-height: set chiều cao nhỏ nhất(nội dung phát sinh thì nó sẽ tự tăng lên)
+    +max-height: set chiều cao tối đa (nội dung nhiều sẽ bị tràn viền) 
+    + ko set thì chiều cao tự động tăng theo nội dung
+    +đơn vị tính phổ biến là px % vh
+
+cursor: đổi con trỏ chuột thành cái khác ví dụ pointer là đổi thành bàn tay
+
+@keyframes: hiệu ứng
++ opacity: mờ đến rõ
+
+line-height: khoảng cách giữa các dòng văn bản
+
+flex-wrap: wrap: khi flex item đủ 100% độ rộng thì tự động xuống dòng
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+[
+    {
+        "MaNhanVien": 1,
+        "HoTen":"Nguyễn văn A",
+        "SoGioLam":10.5,
+        "Luong1h":10
+    },
+    {
+        "MaNhanVien": 2,
+        "HoTen":"Nguyễn văn b",
+        "SoGioLam":9.5,
+        "Luong1h":5
+    }
+]

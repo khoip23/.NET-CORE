@@ -1,0 +1,17 @@
+BUỔI 10:
+object : là tập hợp tất cả các kiểu dữ liệu trong c#
+dynamic : tương tự object + vượt qua còm pai time, hạn chế nhất có thể chỉ dùng khi that sự cần thiết
+var : var là từ khóa không phải kdl, giúp khai báo 1 biến không cần biết kiểu dữ liệu
+
+-LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG OOP-
++Class: lớp đối tượng 
++Tạo 1 class đối tượng: (public class đối tượng..) và tạo hàm trong class đối tượng
+
+-Từ khóa chỉ phạm vi:
++public: cho phép truy cập từ mọi nơi
++private: chỉ cho phép truy cập từ trong class
++protected: cho phép truy cập từ trong lớp và các lớp kế thừa
+
++1 lớp đối tượng có thể tạo ra nhiều đối tượng.
+
+aaa

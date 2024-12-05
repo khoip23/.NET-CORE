@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <!-- Các thẻ input sẽ được chứa trong thẻ form-->
+        <!--
+            form: thẻ block
+            - Dùng để lấy thông tin người dùng để gửi về server xử lý
+            - action: Nơi tiếp nhận thông tin các thẻ input
+            - method: Giao thức gửi nhận dữ liệu từ form (GET: Gửi qua url, POST: gửi ngầm)
+            + label (span): (inline) tương tự thẻ nhưng không chưa link
+            + Các thẻ input: (inline)
+                type: 
+                    +text: Nội dung nhập nhập vào là text (văn bản)
+                    +password: không copy được nội dung và nội dung sẽ được che bằng ký tự đặc biệt
+                    +radio: Là thẻ dùng để chọn 1 trên nhiều option
+                        + name: Dùng để xác định 1 group radio 
+                        + id: Kết hợp với label for để tăng phạm vi click chọn
+                        + value: giá trị khi người dùng chọn
+                placeholder: nhãn hiển thị mờ trên thẻ input
+
+         -->
+        <form action="/menu.html" method="get">
+            <div>
+                <label>Nhập email: </label>
+                <input type="text" name="email" placeholder="nhập email" />
+            </div>
+            <div>
+                <label>Password: </label>
+                <input type="password" name="password"  placeholder="nhập mật khẩu"  />
+            </div>
+            <div>
+                <label>Giới tính: </label>
+                <input type="radio" name="gioitinh" id="nam" value="nam" /> <label for="nam">  Nam</label>
+                <input type="radio" name="gioitinh" id="nu" value="nu" /> <label for="nu">Nữ</label> 
+            </div>
+            <div>
+                <label>Sở thích: </label>
+                <input type="checkbox" name="sothich" id="laptrinh" value="laptrinh" /> <label for="laptrinh"> Lập trình</label>
+                <input type="checkbox" name="sothich" id="bongda" value="bongda" /> <label for="bongda">Bóng đá</label> 
+                <input type="checkbox" name="sothich" id="bongro" value="bongro" /> <label for="bongro">Bóng rổ</label> 
+                <input type="checkbox" name="sothich" id="khac" value="khac" /> <label for="khac">Khác</label> 
+            </div>
+            <div>
+                <label>Quốc tịch</label>
+                <select name="quoctich">
+                    <option value="VN">Việt Nam</option>
+                    <option value="CN">Trung Quốc</option>
+                    <option value="EN">Anh</option>
+                </select>
+            </div>
+            <div>
+                <label>Sở thích</label>
+                <select name="sothichsl" multiple>
+                    <option value="laptrinh">Lập trình</option>
+                    <option value="bongro">Bóng rổ</option>
+                    <option value="bongda">Bóng đá</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">Gửi</button>
+            </div>
+
+            <h3>Video</h3>
+            <video width="720" controls poster="/img/grid-metro-1.jpg">
+                <source src="/img/video.mp4" />
+            </video>
+    </div>
+</body>
+
+</html>

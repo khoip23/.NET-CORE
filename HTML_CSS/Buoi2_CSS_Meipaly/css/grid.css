@@ -1,0 +1,38 @@
+.grid-container {
+    height: 800px;
+    width: 1000px;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.item {
+    /* height: 50px;
+    width: 50px; */
+    background-color: blue;
+    margin: 10px;
+}
+
+.item-1 {
+    /* chỉnh độ rộng của grid-item
+    grid-column: n / span margin: 
+    n: vị trí của phần tử n
+    m: số cột mà phần tử chiếm */
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.item-10 {
+    /* chỉnh độ rộng của grid-item
+    grid-column: n / span margin: 
+    n: vị trí của phần tử n
+    m: số cột mà phần tử chiếm */
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+
+    /* tính vị trí sẽ dựa trên kết quả layout */
+}
+
+
+

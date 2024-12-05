@@ -1,0 +1,57 @@
+1. HTML:
+    1.1: Thẻ block: Nội dung của thẻ sẽ chiến full hết 1 dòng hiển thị
+    1.2: thẻ inline: độ rộng của thẻ sẽ bằng nội dung của thẻ
+    1.3: thẻ unline - block : độ rộng thẻ bằng nội dung tuy nhiên sẽ style đợc 1 số thuộc tính của thẻ block
+2. h1, h2, h3, h4...: Hiển thị tiêu đề văn bản (block)
+	 -thuộc tính:
+		+ style: dung để chỉnh văn bản
+			color: màu sắc (tên màu | rgb | hex)
+			font-size: kích thước (px, pt, rem, em)
+			align: canh lề
+3. Thẻ a: Thẻ liên kết (inline)
+    -thuộc tính:
+		+ style: dung để chỉnh văn bản (tương tự thẻ h)
+        + href: chứa đường dẫn liên kết
+            ++: đường dẫn tuyệt đối: là 1 link cụ Thẻ
+            ++: đường dẫn tương đối: là đi the cấu trúc thư mục và tập tin
+                +++: ./ : đi từ thư mục gốc chứa file đó
+                +++: /  : đi từ thư mục gốc của ứng dụng
+                +++: ../: đi ra từ thư mục bên ngoài 1 cấp
+                +++: ten_file: đi đến file cùng thư mục
+        + target: 
+            ++: _blank: Hiển thị nội dung trang web ở trang đích ở tab kế bên
+4. Thẻ hr : thẻ hiển thị đường thẳng (block) - thẻ khuyết đóng
+    +color: màu đường kẻ
+    +size: chỉnh độ dày đường kẻ
+    +wedth: chỉnh kích thước chiều rộng của thẻ (chỉnh theo %)
+5. Thẻ p: THẻ hiển thị đoạn văn bản (block)
+    + thẻ <br /> : thẻ thường đi chung với văn bản ứng với ký tự xuống dòng
+    + HTML entity code: hiển thị ký tự đặc biệt trên văn bản
+    + thẻ <pre>: giữ format html thành format văn bản
+6. Thẻ ol: thẻ hiển thị nội dung dưới dạng list có thứ tự (block)
+7. Thẻ ul: thẻ hiển thị nội dung dưới dạng không có thứ tự (block)
+    +Style:
+        ++: list-style: kiểu hiển thị list item
+8. Thẻ img:  thẻ hiển thị nội dung là hình ảnh
+    +width: độ rộng
+    +height: chiều cao
+    +src: source hình (đường dẫn đi đến hình ảnh hoặc mã base64)
+    +alt: hiển thị tiêu đề ảnh
+    * lưu ý: chỉnh hỉnh ảnh chỉ chỉnh width hoặc height không chỉnh cả 2
+9. thẻ table: dùng để hiển thị thong tin dưới dạng bảng chi tiết (block)
+    -Thuộc tính của table:
+        +border: chỉnh viền
+        +cellspacing: khoảng cách giữa các ô
+        +cellpadding: khoảng cách từ văn bản tới viền
+    +thead: table header dùng để hiển thị tiêu đề
+    +tbody: dùng để hiển thị nội dung chi tiết
+    +tfoot: dùng để hiển thị phần của bảng (ít sử dụng)
+        ++tr: table row
+        ++td hoặc th:
+            -td: dùng cho tbody
+            -th: dùng cho thead
+                + rowspan: số dòng td đó chiến
+                +colspan: số cột td đó chiếm
+                +align: chỉnh trái phải giữa
+                +valign: chỉnh trên dưới 
+10. thẻ div (block): dùng để phân vùng hoặc gom nhóm các thẻ inline để set up vị trí

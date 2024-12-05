@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/chilling-cafe-01.jpg">
+    <title>Web bán cà phê</title>
+</head>
+
+<body>
+    <!--
+    + HMTL: 
+        + Thẻ block: Nội dung của thẻ sẽ chiếm full width (chiếm hết 1 dòng hiển thị)
+        + Thẻ inline: Độ rộng của thẻ sẽ bằng nội dung của thẻ 
+        + Thẻ inline - block: độ rộng thẻ bằng nội dung tuy nhiên sẽ style được 1 số thuộc tính của thẻ block
+    + h1, h2,h3,h4,..., h6: Hiển thị tiêu đề văn bản (block)
+        + thuộc tính : 
+            style: dùng để tinh chỉnh văn bản
+                color: màu sắc (tên màu | rgb | hex) 0123456789ABCDEF
+                font-size: kích thước (px, pt, rem, em)
+                align: canh lề (left | center | right)
+    + a: Thẻ liên kết (inline)
+        + thuộc tính
+            + style: Tương tự thẻ h
+            + href: Chứa đường dẫn liên kết đến 
+                + Đường dẫn: 
+                    + Tuyệt đối: là 1 link cụ thể 
+                    + Tương đối: Đi theo cấu trúc thư mục và tập tin
+                        ./: đi ra thư mục gốc chứa file đó
+                        /: đi từ thư mục gốc của ứng dụng
+                        ../: đi ra thư mục bên ngoài 1 cấp
+                        ten_file: đi đến file cùng thư mục
+            + target: 
+                _blank: Hiển thị nội dung web ở trang đích ở tab kế bên
+    + hr: Thẻ hiển thị đường thẳng (block) - thẻ khuyết đóng
+        color: màu đường kẻ
+        size: dùng để chỉnh độ dày đường kẻ
+        width: chỉnh kích thước chiều rộng của thẻ (chỉnh theo %)
+    + p: Thẻ hiển thị đoạn văn bản (block)
+        + <br />: Thẻ thường đi chung với văn bản ứng với ký tự xuống dòng
+        HTML entity code: hiển thị ký tự đặc biệt trên văn bản
+        + <pre> : Giữ format html thành format văn bản
+    + ol: Thẻ hiển thị nội dung dưới dạng list có thứ tự (block)
+    + ul: Thẻ hiển thị nội dung dưới dạng list không có thứ tự(block)
+            style:
+                list-style: kiểu hiển thị list item
+    + img: Thẻ hiển thị nội dung là hình ảnh
+            witdh: độ rộng
+            height: chiều cao
+            src: source hình (đường dẫn đi đến hình hoặc mã base64)
+            alt: hiển thị tiêu đề ảnh
+            + Lưu ý: Đối với hình thì ta chỉ set 1 giá trị là width hoặc height
+            + div (the block): 
+                Dùng để phân vùng nội dung 
+                hoặc gôm nhóm các thẻ inline để setup vị trí 
+-->
+    <div style="padding-bottom:500px;">
+        <div id="header">
+            <h1 style="text-align: center;font-size:50px;color:#021d35;">
+                Cybercafeeeeee
+            </h1>
+            <div style="text-align: center; ">
+                <a href="/" style="font-size: 20px; color:red;">Home |</a>
+                <a href="menu.html" target="_blank">Menu |</a>
+                <a href="/order.html" target="_parent">Order</a>
+                <a href="https://thecoffeehouse.com/collections/tra-tai-nha">The coffee house</a>
+            </div>
+        </div>
+        <hr color="red" size="5" width="75%" />
+        <h2 style="text-align: center;font-size:50px;color:#021d35;">
+            About out café
+        </h2>
+        <p style="text-align: right;color:pink;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, architecto sunt. <br /> Veniam asperiores sed
+            consectetur, dolores doloribus excepturi incidunt cumque perspiciatis voluptas nobis libero corrupti
+            similique
+            iste, unde tempore ullam! &lt;br&gt;
+        <pre>
+        Hello 123
+        Hello 234
+    </pre>
+        </p>
+        <hr color="red" size="5" width="75%" />
+        <div id="coffee-list">
+            <ol type="A">
+                <h3>Coffee list</h3>
+                <li>Black coffee</li>
+                <li>Pink coffee</li>
+                <li>Green coffee</li>
+            </ol>
+            <ul type="circle" style="list-style: korean-hanja-formal;">
+                <h3>Milk tea list</h3>
+                <li>Black Milk tea </li>
+                <li>Pink Milk tea </li>
+                <li>Green Milk tea </li>
+            </ul>
+            <img src="/img/chilling-cafe-01.jpg" width="700" alt="hình cà phê" />
+
+        </div>
+        <hr color="red" size="5" width="75%" />
+        <h1>Menu</h1>
+
+        <!--
+        table: Dùng để hiển thị thông tin dưới dạng bảng chi tiết (block)
+            + thuộc tính: 
+                border: chỉnh viền
+                cellspacing: khoảng cách giữa các ô
+                cellpadding: khoảng cách từ văn bản đến viền ô đó 
+                align: vị trí table
+            + thead: Table header dùng để hiển thị tiêu đề
+            + tbody: Dùng để hiển thị nội dung chi tiết
+            + tfoot: Dùng để hiển thị phần của bảng (Ít sử dụng)
+                + tr: table row 
+                + td hoặc th:
+                    td: dùng cho tbody
+                    th: dùng cho thead 
+                    + rowspan: Số dòng td đó chiếm
+                    + colspan: Số cột td đó chiếm
+                    + align: chỉnh trái phải giữa (left | right | center)
+                    + valign: chỉnh trên giữa dưới (top | middle | bottom)
+    -->
+
+        <table style="width: 75%;" border="1" cellspacing="0" cellpadding="10px" align="center">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2">1</td>
+
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <br />
+        <h3 style="text-align: center;">Table data</h3>
+        <br />
+
+        <table style="width: 75%;" border="1" cellspacing="0" cellpadding="10px" align="center">
+            <thead>
+                <tr style="background: #EEE;">
+                    <th colspan="2">Name</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4" style="background: url(/img/chilling-cafe-13.jpg);">
+
+                        <h3 style="color: #fff;">Cà phê sữa</h3>
+                    </td>
+                    <td rowspan="2" align="center" valign="top">nội dung 2</td>
+                    <td>nội dung 3</td>
+                    <td>nội dung 4</td>
+                </tr>
+                <tr>
+                    <td>nội dung 3</td>
+                    <td>nội dung 4</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">nội dung 2</td>
+                    <td>nội dung 3</td>
+                    <td>nội dung 4</td>
+                </tr>
+                <tr>
+                    <td>nội dung 3</td>
+                    <td>nội dung 4</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">nội dung 1</td>
+                    <td>nội dung 2</td>
+                    <td rowspan="3">nội dung 3</td>
+                    <td>nội dung 4</td>
+                </tr>
+                <tr>
+                    <td>nội dung 3</td>
+                    <td rowspan="2">nội dung 4</td>
+                </tr>
+                <tr>
+                    <td>nội dung 4</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <br />
+        <h3 style="text-align: center;">Talk to us</h3>
+        <div>Reach us via Email: <a href="mailto:cybercate@gmail.com">cybercate@gmail.com</a> or Hotline: <a
+                href="tel:0909090909">9021021014</a>. Thank vou!</div>
+
+        <a href="#coffee-list">Về đầu trang</a>
+        <!--html 5-->
+         
+      
+    </div>
+</body>
+
+</html>

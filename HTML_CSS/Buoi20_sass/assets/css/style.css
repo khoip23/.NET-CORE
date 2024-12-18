@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.active {
+  color: blue !important;
+  border-bottom: 3px solid blue;
+}
+
+.shadow, .header {
+  box-shadow: 3px 3px 9px 2px rgb(9, 173, 232);
+  -webkit-box-shadow: 3px 3px 9px 2px rgb(9, 173, 232);
+  -moz-box-shadow: 3px 3px 9px 2px rgb(9, 173, 232);
+}
+
+.header {
+  background: #e2ebfc;
+  padding: 1rem;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .logo {
+  font-size: 40px;
+  font-weight: 800;
+  color: blue;
+}
+.header .container .menu ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.header .container .menu ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  position: relative;
+}
+.header .container .menu ul li a::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: blue;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+.header .container .menu ul li a:hover {
+  color: blue;
+}
+.header .container .menu ul li a:hover::before {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.carousel {
+  background: red;
+  height: 100vh;
+}
+.carousel .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.carousel .container .img-product {
+  display: block;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

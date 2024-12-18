@@ -1,0 +1,89 @@
+@import "./variable";
+@import "./base";
+
+.header{
+    background: $bg-light;
+    @extend .shadow;
+    padding: $p-4;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            font-size: $fs-XXXXL;
+            // font-size: 5rem;
+            font-weight: $fw-bold;
+            color: $text-primary;
+        }
+        .menu{
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: $m-4;
+                    a{
+                      text-decoration: none;
+                      font-size: $fs-base;
+                      font-weight: $fw-light;
+                      color: $text-dark;
+                      position: relative;
+                      &::before{
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: $bg-primary;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        transition: width 0.3s;
+                      }
+                      &:hover{
+                        &::before{
+                            width: 100%;
+                            transition: width 0.3s;
+                        }
+                        color: $text-primary;
+                      }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.carousel{
+    background: red;
+    height: $vh-100;
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .img-product{
+            display: block;
+            width: $w-100;
+        }
+        .info{
+            .title{
+
+            }
+            .content{
+
+            }
+            .desc{
+
+            }
+            .button{
+                .btn-info{
+                    i{
+
+                    }
+                }
+                .btn-shop{
+                    i{
+
+                    }
+                }   
+            }
+        }
+    }
+}

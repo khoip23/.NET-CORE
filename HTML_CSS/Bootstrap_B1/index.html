@@ -100,18 +100,77 @@
             </div>
         </div>
 
-        <hr/>
+        <hr />
         <h3>Flẽx:</h3>
-        <div class="d-flex flex-column justify-content-start justify-content-md-center align-items-center bg-secondary-subtle" style="height: 500px;">
+        <div class="d-flex flex-column justify-content-start justify-content-md-center align-items-center bg-secondary-subtle"
+            style="height: 500px;">
             <div class="item bg-dark text-primary w-25">1</div>
             <div class="item bg-warning text-primary w-25">2</div>
             <div class="item bg-secondary text-primary w-25">3</div>
             <div class="item bg-success text-primary w-25">4</div>
         </div>
-        <hr/>
+        <hr />
 
-        <h3>text selection</h3>
-        <!--1:24:30-->
+        <h3>Link opacity</h3>
+
+        <h3>Object fit</h3>
+        <img src="..." class="object-fit-contain border rounded" alt="...">
+        <img src="..." class="object-fit-cover border rounded" alt="...">
+        <img src="..." class="object-fit-fill border rounded" alt="...">
+        <img src="..." class="object-fit-scale border rounded" alt="...">
+        <img src="..." class="object-fit-none border rounded" alt="...">
+
+        <br />
+
+        <h3>postion</h3>
+        <style>
+            .item-position {
+                width: 50px;
+                height: 50px;
+                background: black;
+            }
+        </style>
+        <div class="position-relative bg-secondary-subtle" style="height: 300px;">
+            <div class="position-absolute top-0 start-0 item-position"></div>
+            <div class="position-absolute top-0 end-0 item-position"></div>
+            <div class="position-absolute top-50 start-50 item-position"></div>
+            <div class="position-absolute bottom-50 end-50 item-position"></div>
+            <div class="position-absolute bottom-0 start-0 item-position"></div>
+            <div class="position-absolute bottom-0 end-0 item-position"></div>
+        </div>
+
+        <br />
+
+        <h3>Layout</h3>
+        <div class="row bg-dark text-warning">
+            <div class="col-lg-2 col-md-3 col-sm-6 bg-danger">1</div>
+            <div class="col-lg-2 col-md-3 col-sm-6 bg-success">2</div>
+            <div class="col-lg-2 col-md-3 col-sm-6 bg-danger">3</div>
+            <div class="col-lg-2 col-md-3 col-sm-6 bg-danger">4</div>
+            <div class="col-lg-2 col-md-3 col-sm-6 bg-danger">5</div>
+            <div class="col-lg-2 col-md-3 col-sm-6 bg-danger">6</div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 bg-info">cot 1</div>
+            <div class="col-4 bg-secondary-subtle">cot 2</div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-6 bg-primary">1</div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6 bg-success">2</div>
+                    <div class="col-6 bg-primary">3</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 bg-success">2</div>
+                    <div class="col-6 bg-primary">3</div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
     <!--js bootstrap-->

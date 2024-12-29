@@ -1,6 +1,6 @@
 using System;
 
-namespace Blazor_basic.Data
+namespace blazor_web_server.Data
 {
     public class WeatherForecast
     {

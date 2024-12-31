@@ -1,0 +1,27 @@
+@page "/oneway-binding"
+@layout HomeMasterPage
+<h1 class="container">
+    Databinding
+    <br/>
+    <span class="badge bg-success">Helloooooooooooooo @name @Sumscore(10, 5)</span>
+    <br/>
+    <span class="badge bg-danger">Sumscore: @Sumscore(10, 5)</span>
+    <br/>
+    <span class="badge bg-primary">Count: @count</span>
+    <button class="btn btn-primary" @onclick="ChangeCount">+</button>
+</h1>
+
+@code{
+    private string name {get; set;} = "Khôi";
+
+    private int count{get; set;} = 1;
+
+    private int Sumscore(int a, int b)
+    {
+        return a + b;
+    }
+    
+    private void ChangeCount(){
+        count++;
+    }
+}

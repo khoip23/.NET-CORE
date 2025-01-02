@@ -1,0 +1,52 @@
+@page "/handle-event"
+@layout HomeMasterPage
+
+<div class="container">
+    <h1>Handle Event</h1>
+    <code>Bấm vào button sẽ đổi màu xanh thành màu đỏ </code>
+    <br/>
+    @* <button class="@ClassNameButton" @onclick="HandleChangeColorButton">ON</button> *@
+    @{
+        if(status){
+            <button class="btn btn-success" @onclick="HandleChangeColorButton">ON</button>
+        }
+        else
+        {
+            <button class="btn btn-danger" @onclick="HandleChangeColorButton">OFF</button>
+        }
+    }
+    <br/>
+    <code>Xử lý nhập liệu và hiển thị</code>
+    <br/>
+    <label>Thông tin sản phẩm:</label>
+    <br/>
+    @{
+        int total = quantity * price;
+    }
+    <input id="quatity" class="w-25 form-control d-inline" placeholder="Nhập vào số lượng" type="number" value="@quantity" @onchange="handleChangInput" />
+    <input id="price" class="w-25 form-control ms-2 d-inline" placeholder="Nhập vào giá" type="number" value="@price"@onchange="handleChangInput" />
+    <h1 class="mt-2">Tổng tiền: @total</h1>
+
+</div>
+
+@code {
+    private string ClassNameButton {get; set;} = "btn btn-success";
+
+    private bool status {get; set;} = false; //false off, true on
+
+    private void HandleChangeColorButton()
+    {
+        //xử lý thay đổi state
+        @* ClassNameButton = "btn btn-danger"; *@
+        status = !status;
+        Console.WriteLine("clicked");
+    }
+
+    private int quantity {get; set;} = 0;
+    private int price {get; set;} = 0;
+
+    private void handleChangInput(ChangeEventArgs eventArgs){
+        Console.WriteLine("Input");
+        string valueInput = (string) eventArgs.Value;
+    }
+}

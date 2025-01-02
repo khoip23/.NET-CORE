@@ -4,10 +4,11 @@
 <div class="container">
     <h1>Handle Event</h1>
     <code>Bấm vào button sẽ đổi màu xanh thành màu đỏ </code>
-    <br/>
+    <br />
     @* <button class="@ClassNameButton" @onclick="HandleChangeColorButton">ON</button> *@
     @{
-        if(status){
+        if (status)
+        {
             <button class="btn btn-success" @onclick="HandleChangeColorButton">ON</button>
         }
         else
@@ -15,24 +16,73 @@
             <button class="btn btn-danger" @onclick="HandleChangeColorButton">OFF</button>
         }
     }
-    <br/>
+    <br />
     <code>Xử lý nhập liệu và hiển thị</code>
-    <br/>
+    <br />
     <label>Thông tin sản phẩm:</label>
-    <br/>
+    <br />
     @{
         int total = quantity * price;
+        string fontSize = $"{fSize}px";
     }
-    <input id="quatity" class="w-25 form-control d-inline" placeholder="Nhập vào số lượng" type="number" value="@quantity" @onchange="handleChangInput" />
-    <input id="price" class="w-25 form-control ms-2 d-inline" placeholder="Nhập vào giá" type="number" value="@price"@onchange="handleChangInput" />
+    <input id="quatity" class="w-25 form-control d-inline" placeholder="Nhập vào số lượng" type="number"
+        value="@quantity" @onchange="handleChangQuantity" />
+    <input id="price" class="w-25 form-control ms-2 d-inline" placeholder="Nhập vào giá" type="number" value="@price"
+        @onchange="handleChangPrice" />
     <h1 class="mt-2">Tổng tiền: @total</h1>
+
+    <br />
+    <h3>Tăng giảm font chữ</h3>
+    <p style="font-size: @fontSize;">Lorem ipsum dolor sit amet</p>
+    <button class="btn btn-dark me-2" @onclick = "e => handleChangeSize(1)">Zoom in</button>
+    <button class="btn btn-dark me-2" @onclick = "e => handleChangeSize(-1)">Zoom out</button>
+
+    <br />
+    <h3>job app</h3>
+    <div class="card">
+        <img src="@person.Image"amet alt="..."/>
+        <div class="card-body">
+            <p class="card-title">Name: @person.Name</p>
+            <p class="card-text">Age: @person.Age</p>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-danger" @onclick = "handleChangePerson">
+                <i class="fa fa-heart"></i>
+                Random
+            </button>
+        </div>
+    </div>
 
 </div>
 
 @code {
-    private string ClassNameButton {get; set;} = "btn btn-success";
+    private void handleChangePerson()
+    {
+        List<PersonViewModel> lstPerson = new List<PersonViewModel>();
+        PersonViewModel Per1 = new PersonViewModel(34, "Nguyennguyennguyen", 52);
+        PersonViewModel Per2 = new PersonViewModel(12, "Phamphampham", 24);
+        PersonViewModel Per3 = new PersonViewModel(324, "Trantrantran", 65);
 
-    private bool status {get; set;} = false; //false off, true on
+        lstPerson.Add(Per1);
+        lstPerson.Add(Per2);
+        lstPerson.Add(Per3);
+
+        Random random = new Random();
+        int index = random.Next(0, lstPerson.Count);
+
+        person = lstPerson.ElementAt(index);
+    }
+    private PersonViewModel person = new PersonViewModel();
+    private double fSize = 17;
+
+    private void handleChangeSize(int value)
+    {
+        fSize += value;
+    }
+
+    private string ClassNameButton { get; set; } = "btn btn-success";
+
+    private bool status { get; set; } = false; //false off, true on
 
     private void HandleChangeColorButton()
     {
@@ -42,11 +92,17 @@
         Console.WriteLine("clicked");
     }
 
-    private int quantity {get; set;} = 0;
-    private int price {get; set;} = 0;
+    private int quantity { get; set; } = 0;
+    private int price { get; set; } = 0;
 
-    private void handleChangInput(ChangeEventArgs eventArgs){
+    void handleChangQuantity(ChangeEventArgs e)
+    {
         Console.WriteLine("Input");
-        string valueInput = (string) eventArgs.Value;
+        quantity = Convert.ToInt16((string) e.Value);
+    }
+    void handleChangPrice(ChangeEventArgs e)
+    {
+        Console.WriteLine("Input");
+        price = Convert.ToInt16((string) e.Value);
     }
 }

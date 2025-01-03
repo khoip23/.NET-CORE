@@ -20,4 +20,4 @@ class PersonViewModel
         Age = newAge;
         Image = $"https://i.pravatar.cc?u={Id}";
     }
-}
+} 2:05

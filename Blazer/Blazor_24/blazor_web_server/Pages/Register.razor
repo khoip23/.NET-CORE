@@ -1,0 +1,47 @@
+@page "/register"
+@layout AdminMasterPage
+<div class="container">
+    <EditForm Model="@model" OnValidSubmit="HandleSubmit" class="w-75 mx-auto">
+        <h3>Register</h3>
+
+        <div class="form=group">
+            <label for="UserName">UserName</label>
+            <input id="UserName" class="form-control" @bind="model.UserName" />
+        </div>
+        <div class="form=group">
+            <label for="Password">Password</label>
+            <input id="Password" type="password" class="form-control" @bind="model.Password" />
+        </div>
+        <div class="form=group">
+            <label for="FullName">FullName</label>
+            <input id="FullName" class="form-control" @bind="model.FullName" />
+        </div>
+        <div class="form=group">
+            <label for="Gender">Gender</label>
+            <select class="form-control" id="Gender" @bind="model.Gender">
+                <option value="Mail">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="form=group">
+            <label for="Gender">Country</label>
+            <select class="form-control" id="Country" @bind="model.Country">
+                <option value="VN">VIET NAM</option>
+                <option value="EN">ENGLAND</option>
+            </select>
+        </div>
+        <div class="form-control mt-2">
+            <button class="btn btn-dark my-2" type="submit">Register</button>
+        </div>
+    </EditForm>
+</div>
+@code {
+    @using System.Text.Json
+    UserViewModels model = new UserViewModels();
+
+    void HandleSubmit(){
+        //chuyển từ obj sang text
+        string json = JsonSerializer.Serialize(model);
+        Console.WriteLine(json);
+    }
+}  

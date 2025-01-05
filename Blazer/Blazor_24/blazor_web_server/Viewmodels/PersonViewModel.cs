@@ -7,7 +7,7 @@ class PersonViewModel
     public int Id { get; set; } = 2;
     public string Name { get; set; } = "ABC";
     public int Age { get; set; } = 18;
-    public string Image{ get; set; } = "";
+    public string Image { get; set; } = "";
     public PersonViewModel()
     {
         Image = $"https://i.pravatar.cc?u={Id}";

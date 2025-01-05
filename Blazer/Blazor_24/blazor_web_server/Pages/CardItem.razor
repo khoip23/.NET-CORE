@@ -1,0 +1,16 @@
+
+
+
+<div class="card">
+    <img src="@prod.Image" alt="..."/>
+    <div class="card-body">
+        <h2 class="card-title">@prod.Name</h2>
+        <div class="card-text">@prod.Price</div>
+        <button class="btn btn-success">View detail</button>
+    </div>
+</div>
+
+@code{
+    [Parameter]
+    public ProductCardVM prod {get; set;} = new ProductCardVM();
+}

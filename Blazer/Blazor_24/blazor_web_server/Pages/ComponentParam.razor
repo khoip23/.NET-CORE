@@ -1,0 +1,46 @@
+@page "/Component-param"
+@layout HomeMasterPage
+
+<div class="container">
+    <h3>Component-param</h3>
+    <div class="row">
+        @foreach (ProductCardVM item in lstProduct)
+        {
+            <div class="col-4">
+                <CardItem prod="@item" />
+            </div>
+        }
+    </div>
+</div>
+
+<PopupModel contentBody = "abc">
+    <div class="text text-danger">content body</div>
+</PopupModel>
+<!-- Modal trigger button -->
+<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+    Launch
+</button>
+
+<button @onclick="HandleClick">Add product</button>
+
+@code {
+    List<ProductCardVM> lstProduct = new List<ProductCardVM>(){
+new ProductCardVM () {ID = "1", Name = "Iphone", Price = "1000$", Image = "https://picsum.photos/id/1/200/200"},
+new ProductCardVM () {ID = "1", Name = "Iphone pro", Price = "2000$", Image = "https://picsum.photos/id/2/200/200"},
+new ProductCardVM () {ID = "1", Name = "Iphone pro max", Price = "3000$", Image = "https://picsum.photos/id/3/200/200"},
+};
+
+    void HandleClick()
+    {
+        lstProduct.Add(new ProductCardVM()
+            {
+                ID = "4",
+                Name = "Iphone VIP",
+                Price = "100000$",
+                Image = "https://picsum.photos/id/4/200/200"
+            }
+        );
+    }
+}
+
+@*2:09*@

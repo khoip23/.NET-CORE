@@ -1,0 +1,21 @@
+<div class="card">
+    <img src="@prod.Image" alt="..." />
+    <div class="card-body">
+        <h3 class="card-title">@prod.Name</h3>
+        <div class="card-text">@prod.Price</div>
+        <button class="btn btn-success" @onclick="@(e => ViewDetail(@prod))">Detail</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public ProductCardVM prod { get; set; } = new ProductCardVM();
+
+    [Parameter]
+    public EventCallback<ProductCardVM>eventViewDetail {get; set;}
+
+    void ViewDetail(ProductCardVM prdClick)
+    {
+        eventViewDetail.InvokeAsync(prdClick);
+    }
+}

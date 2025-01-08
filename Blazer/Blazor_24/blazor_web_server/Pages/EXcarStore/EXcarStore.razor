@@ -1,0 +1,30 @@
+@page "/ex-carstore"
+@layout HomeMasterPage
+
+<div class="container">
+    <Modal proDetail="@proDetailModal"/>
+    <ProductList lstProduct="@lstProduct" evenClickDetail="ChangeCarModal" />
+
+</div>
+
+@code {
+
+    ProductCarVM proDetailModal = new ProductCarVM()
+        {
+            Id = "1",
+            Name = "Black car",
+            Image = "/images/black-car.jpg",
+            Price = 1000
+        };
+
+    void ChangeCarModal(ProductCarVM prodClick){
+        proDetailModal = prodClick;
+    }
+    List<ProductCarVM> lstProduct = new List<ProductCarVM>()
+{
+new ProductCarVM() { Id = "1", Name = "Black car", Image = "/images/black-car.jpg", Price = 1000},
+new ProductCarVM() { Id = "2", Name = "Red car", Image = "/images/red-car.jpg", Price = 2000},
+new ProductCarVM() { Id = "3", Name = "Silver car", Image = "/images/silver-car.jpg", Price = 3000},
+new ProductCarVM() { Id = "4", Name = "Steel car", Image = "/images/steel-car.jpg", Price = 4000},
+};
+}

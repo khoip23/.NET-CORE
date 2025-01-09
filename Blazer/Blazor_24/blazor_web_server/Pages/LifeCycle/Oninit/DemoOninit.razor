@@ -1,0 +1,50 @@
+@page "/demo-oninit"
+@layout HomeMasterPage
+
+@inject HttpClient _http
+@* @using System.Net.Http; *@
+@using System.Net.Http.Json;
+
+<div class="container">
+    <h3>Shoes Shop</h3>
+    <div class="row">
+
+        @foreach (ProductModel productModel in lstProduct)
+        {
+            <div class="col-4">
+                <div class="card">
+                    <img src="@productModel.img" alt="..." />
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">@productModel.name</h3>
+                    <p class="card-text">@productModel.price</p>
+                    <button class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i>
+                        Add to card
+                    </button>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+<button class="btn btn-dark" @onclick="GetDataProduct">Get data product</button>
+
+@code {
+    public List<ProductModel> lstProduct = new List<ProductModel>();
+    @* public HttpClient _http; *@
+    protected override async Task OnInitializedAsync()
+    {
+        GetDataProduct();
+        
+    }
+
+    async void GetDataProduct() //gọi api từ sever khác để lấy dữ liệu
+    {
+        var response = await _http.GetFromJsonAsync<ProductModel[]>("https://svcy.myclass.vn/api/ProductApi/getall");
+        lstProduct = response.ToList();
+        StateHasChanged();
+    }
+}

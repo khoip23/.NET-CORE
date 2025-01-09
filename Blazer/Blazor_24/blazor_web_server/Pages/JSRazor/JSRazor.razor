@@ -1,0 +1,23 @@
+@page "/jsblazor"
+@layout HomeMasterPage
+@inject IJSRuntime JS;
+
+<div class="container">
+    <h3>JSBlazor</h3>
+
+    <button class="btn btn-primary" @onclick="handleClick">Say hello</button>
+</div>
+
+<script>
+    funtion sayHello() {
+        console.log("Hello from JS");
+        localStorage.setItem("data", "data razor");
+    }
+</script>
+
+@code{
+    async Task handleClick()
+    {
+        await JS.InvokeVoidAsync("sayHello");
+    }
+}

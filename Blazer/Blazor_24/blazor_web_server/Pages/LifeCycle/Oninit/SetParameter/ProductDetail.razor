@@ -1,0 +1,40 @@
+@page "/detail{Id}"
+@inject HttpClient _http
+@using System.Net.Http.Json;
+
+<div class="container">
+    <h3>Product Detail</h3>
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <img src="https://picsum.photos/id/1/200/200" alt="..." />
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Product name</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                <button class="btn btn-dark">
+                    <i class="fa fa-cart-plus"></i>
+                    Add to card
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    public ProductModel ProdDetail = new ProductModel();
+    protected override async Task OnInitializedAsync()
+    {
+        GetDataProduct();
+        
+    }
+
+    async void GetDataProduct() //gọi api từ sever khác để lấy dữ liệu
+    {
+        var response = await _http.GetFromJsonAsync<ProductModel>($"https://svcy.myclass.vn/api/ProductApi/get/{Id}");
+        ProdDetail = response;
+        StateHasChanged();
+    }//25p
+}

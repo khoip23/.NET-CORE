@@ -53,13 +53,13 @@ public class CryptoService
     public void AddFavoriteCoin(Coin newcoin)
     {
         var item = lstFavoritesCoin.Find(x => x.id == newcoin.id);
-        if(item == null)
+        if (item == null)
         {
-            lstFavoritesCoin.Add(item);
-            
+            lstFavoritesCoin.Add(newcoin);
         }
         SetStateHasChange();
     }
+
     public event Action OnChange;
 
     public void SetStateHasChange() => OnChange?.Invoke();

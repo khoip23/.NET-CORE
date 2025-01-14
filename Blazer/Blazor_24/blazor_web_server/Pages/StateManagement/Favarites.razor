@@ -1,0 +1,28 @@
+@inject CryptoService crypSer
+<!-- Favorites Section -->
+<h4>Your Favorites</h4>
+<ul class="list-group">
+    @foreach (Coin item in crypSer.lstFavoritesCoin)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="@item.image" alt="..." width="50" />
+            @item.name <span class="badge bg-success">$@item.current_price</span>
+            <button class="btn btn-outline-danger btn-sm">Remove</button>
+        </li>
+    }
+
+
+</ul>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        crypSer.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        crypSer.OnChange -= StateHasChanged;
+    }
+}

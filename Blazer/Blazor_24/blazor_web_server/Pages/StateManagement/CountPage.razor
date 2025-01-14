@@ -1,0 +1,28 @@
+@page "/demo-service-count"
+@layout HomeMasterPage
+
+@inject CountService CountSer;
+
+<div class="container">
+    <h3>DEMO STATE COUNT PAGE</h3>
+    <button class="btn btn-primary">Count: @CountSer.Count</button>
+    <button class="btn btn-success" @onclick="InCrease">Increase</button>
+    <button class="btn btn-success" @onclick="DeCrease">DeCrease</button>
+</div>
+
+@code {
+    protected override void OnInitialized(){
+        CountSer.Onchange += StateHasChanged;
+    }
+        void InCrease()
+    {
+        CountSer.InCrease();
+    }
+    void DeCrease()
+    {
+        CountSer.DeCrease();
+    }
+    public void Dispose(){
+        CountSer.Onchange -= StateHasChanged;
+    }
+}

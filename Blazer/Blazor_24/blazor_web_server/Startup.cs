@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using blazor_web_server.Data;
+using blazor_web_server.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -10,6 +11,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
+using blazor_web_server.Services;
 
 namespace blazor_web_server
 {
@@ -31,6 +34,9 @@ namespace blazor_web_server
             services.AddSingleton<WeatherForecastService>();
 
             services.AddHttpClient();
+            //khai báo service (DI)
+            services.AddScoped<CountService>();
+            services.AddScoped<CryptoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

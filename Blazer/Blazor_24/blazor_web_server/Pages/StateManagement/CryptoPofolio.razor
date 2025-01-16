@@ -11,42 +11,33 @@
                 @foreach (Coin item in crypSer.lstAllCoin)
                 {
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <img src="@item.image" alt="..." />
+                        <img src="@item.image" alt="..." width="50" />
                         @item.name <span class="badge bg-primary">$@item.current_price</span>
-                        <button class="btn btn-outline-primary btn-sm" @onclick="(e)=> Addcoin(item)">Add to
+                        <button class="btn btn-outline-primary btn-sm" @onclick="(e) => AddCoin(item)">Add to
                             Favorites</button>
                     </li>
                 }
-
-
             </ul>
         </div>
-
         <div class="col-md-6">
             <Favorites />
         </div>
-
     </div>
 </div>
-
-
 @code {
-
     protected override async Task OnInitializedAsync()
     {
-        @* crypSer.OnChange += StateHasChanged; *@
+        crypSer.OnChange += StateHasChanged;
         crypSer.GetAllCoinAsync();
-
     }
-
     public void Dispose()
     {
         crypSer.OnChange -= StateHasChanged;
-
     }
-    public void Addcoin(Coin newItem)
+    public void AddCoin(Coin newItem)
     {
-        crypSer.AddFavoriteCoin(newItem);
+        crypSer.AddFavorite(newItem);
     }
+
 
 }

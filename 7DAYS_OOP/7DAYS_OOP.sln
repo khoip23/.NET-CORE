@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "B11", "B11", "{4CF597CF-4AF8-8909-8A0B-1F56104B4C41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buoi1_OOP", "B11\Buoi1_OOP\Buoi1_OOP.csproj", "{889DA077-9D3F-1407-42D2-87682DC77655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{889DA077-9D3F-1407-42D2-87682DC77655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889DA077-9D3F-1407-42D2-87682DC77655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889DA077-9D3F-1407-42D2-87682DC77655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889DA077-9D3F-1407-42D2-87682DC77655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{889DA077-9D3F-1407-42D2-87682DC77655} = {4CF597CF-4AF8-8909-8A0B-1F56104B4C41}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44826CB2-B9BC-4C7A-87EC-D61A1D3D0D07}
+	EndGlobalSection
+EndGlobal

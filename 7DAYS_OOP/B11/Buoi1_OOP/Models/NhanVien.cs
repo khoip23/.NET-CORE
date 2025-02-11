@@ -32,10 +32,10 @@ class NhanVien
         tenNV = Console.ReadLine();
 
         Console.WriteLine("Nhap luong co ban: ");
-        luongCoBan = double.Parse(Console.ReadLine());
+        luongCoBan = Convert.ToDouble(Console.ReadLine());
 
         Console.WriteLine("Nhap so gio lam: ");
-        soGioLam = double.Parse(Console.ReadLine());
+        soGioLam = Convert.ToDouble(Console.ReadLine());
     }
 
     public double tinhLuong()

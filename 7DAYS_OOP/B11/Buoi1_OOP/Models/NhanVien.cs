@@ -1,5 +1,6 @@
 class NhanVien
 {
+    private static int createId = 1;
     public string? maNV;
     public string? tenNV;
     public double luongCoBan;
@@ -11,23 +12,22 @@ class NhanVien
 
     public NhanVien()
     {
-        soNgayNghi = 10;
+        maNV = createId.ToString();
         nhapThongTinNhanVien();
+        createId++;
     }
 
-    public NhanVien(string maNhanVien, string tenNhanVien, double luong, double GioLam)
+    public NhanVien(string tenNhanVien, double luong, double GioLam)
     {
-        maNV = maNhanVien;
+        maNV = createId.ToString();
         tenNV = tenNhanVien;
         luongCoBan = luong;
         soGioLam = GioLam;
+        createId++;
     }
 
     public void nhapThongTinNhanVien()
     {
-        Console.WriteLine("Nhap ma nhan vien: ");
-        maNV = Console.ReadLine();
-
         Console.WriteLine("Nhap ten nhan vien: ");
         tenNV = Console.ReadLine();
 

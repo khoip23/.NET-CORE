@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.WebUtilities;
 
 namespace blazor_web_server.Services;
+
 public class CryptoService
 {
-
     public HttpClient _httpClient;
     public List<Coin> lstAllCoin = new List<Coin>();
     public List<Coin> lstFavoritesCoin = new List<Coin>();
+
     public CryptoService(HttpClient http)
     {
         _httpClient = http;
-
     }
+
     public async void GetAllCoinAsync()
     {
-         // URL gốc của API
+        // URL gốc của API
         var url = "https://api.coingecko.com/api/v3/coins/markets";
         // Các tham số query cần thiết cho API
         var parameters = new Dictionary<string, string>
@@ -29,7 +30,7 @@ public class CryptoService
             { "order", "market_cap_desc" },
             { "per_page", "50" },
             { "page", "1" },
-            { "sparkline", "false" }
+            { "sparkline", "false" },
         };
         // Tạo URI hoàn chỉnh với query string
         var uri = QueryHelpers.AddQueryString(url, parameters);
@@ -45,26 +46,23 @@ public class CryptoService
         SetStateHasChange();
     }
 
-    public void AddFavorite(Coin newCoin){
+    public void AddFavorite(Coin newCoin)
+    {
         var item = lstFavoritesCoin.Find(x => x.id == newCoin.id);
-        if(item == null){
+        if (item == null)
+        {
             lstFavoritesCoin.Add(newCoin);
         }
         SetStateHasChange();
     }
 
-    public void RemoveFavorite(string idCoin){
-
-        lstFavoritesCoin = lstFavoritesCoin.Where(item=>item.id != idCoin).ToList();
+    public void RemoveFavorite(string idCoin)
+    {
+        lstFavoritesCoin = lstFavoritesCoin.Where(item => item.id != idCoin).ToList();
         SetStateHasChange();
-
     }
+
     public event Action OnChange;
 
     public void SetStateHasChange() => OnChange?.Invoke();
-
-    
-
-
-
 }
